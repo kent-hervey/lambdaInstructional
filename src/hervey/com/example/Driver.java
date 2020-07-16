@@ -34,6 +34,12 @@ public class Driver {
 		String testString = new String("Apples");
 		System.out.println(stringLen.test(testString) + " - " + testString +" length is less than 10");
 		
+		//
+		Predicate<String> theLength = (string)-> string.length() <12;
+		String tester = new String ("the big one");
+		System.out.println(theLength.test(tester) + " - " + tester + " length is less than 12");
+		
+		//
 		
 		Consumer<String> consumerStr = (s) -> System.out.println(s.toLowerCase());
 		consumerStr.accept("The Quick Brown Fox Jumped Over the Lazy Dog.");
