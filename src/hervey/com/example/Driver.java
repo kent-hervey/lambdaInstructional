@@ -114,7 +114,7 @@ public class Driver {
 		Book book2 = new Book("Harry Potter and the Sorcerer's Stone", "JK", "Rowling", 411);
 		Book book3 = new Book("The Cat in the Hat", "Dr", "Seuss", 45);
 		
-		//use .collet to aggregate values
+		//use .collect to aggregate values
 		List<Book> books = Arrays.asList(book1, book2, book3);
 		int total = books.stream().collect(Collectors.summingInt(Book::getPages));
 		System.out.println(total);
